@@ -150,18 +150,19 @@ var themeMenus = {};
     <div class="widget-wrap" style="margin: 20px 0;">
 	<div id="search-form-wrap">
 
-    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
-    <input name="wd" type="text" class="search-form-input" style="height: 42px; width: 75%;" placeholder="搜索..." />
+    <form class="search-form">
+    <input id="bdcsMain" type="text" class="search-form-input" style="height: 42px; width: 75%;" placeholder="搜索..." />
     <button type="submit" class="search-form-submit">搜索</button>
 </form>
-<script>
-(function ($) {
-    $('.search-form').on('submit', function (e) {
-        var keyword = $('.search-form-input[name="wd"]').val();
-        window.location = 'https://www.baidu.com/s?wd=site:chuhaiji.cn ' + keyword;
-        return false;
-    });
-})(jQuery);
+<script type="text/javascript">
+(function(){
+	document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
+	var bdcs = document.createElement('script');
+	bdcs.type = 'text/javascript';
+	bdcs.async = true;
+	bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=10944783693680314046' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(bdcs, s);})();
 </script>
 
 </div>
@@ -209,12 +210,12 @@ var themeMenus = {};
 
             
               <div class="widget-entry-thumbnail">
-                <a href="/2017/04/14/20170414-Emtek/" title=""><img width="50" height="50" src="http://pic.cifnews.com/upload/201704/14/201704140905022356.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+                <a href="/2017/04/14/20170414-BigoLive/" title=""><img width="50" height="50" src="https://pic.36krcnd.com/avatar/201703/02072640/gbj7ivr0m67fffmy.jpg!heading" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
               </div>
               <div class="widget-entry-summary">
             
 
-              <h6 style="margin: 0;"><a href="/2017/04/14/20170414-Emtek/">蚂蚁金服进军印度尼西亚，与Emtek成立合资公司</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/04/14/20170414-BigoLive/">Bigo Live获 C 轮融资，YY的“海外故事”：1 年 3000 万月活、估值 4 亿美金</a></h6>
               <span>四月 14, 2017</span>
             </div>
 
@@ -224,12 +225,12 @@ var themeMenus = {};
 
             
               <div class="widget-entry-thumbnail">
-                <a href="/2017/04/14/20170414-BigoLive/" title=""><img width="50" height="50" src="https://pic.36krcnd.com/avatar/201703/02072640/gbj7ivr0m67fffmy.jpg!heading" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+                <a href="/2017/04/14/20170414-Emtek/" title=""><img width="50" height="50" src="http://pic.cifnews.com/upload/201704/14/201704140905022356.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
               </div>
               <div class="widget-entry-summary">
             
 
-              <h6 style="margin: 0;"><a href="/2017/04/14/20170414-BigoLive/">Bigo Live获 C 轮融资，YY的“海外故事”：1 年 3000 万月活、估值 4 亿美金</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/04/14/20170414-Emtek/">蚂蚁金服进军印度尼西亚，与Emtek成立合资公司</a></h6>
               <span>四月 14, 2017</span>
             </div>
 
