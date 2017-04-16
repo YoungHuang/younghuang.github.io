@@ -170,19 +170,18 @@ var themeMenus = {};
     <div class="widget-wrap" style="margin: 20px 0;">
 	<div id="search-form-wrap">
 
-    <form class="search-form">
-    <input id="bdcsMain" type="text" class="search-form-input" style="height: 42px; width: 75%;" placeholder="搜索..." />
+    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
+    <input name="wd" type="text" class="search-form-input" style="height: 42px; width: 75%;" placeholder="搜索..." />
     <button type="submit" class="search-form-submit">搜索</button>
 </form>
-<script type="text/javascript">
-(function(){
-	document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
-	var bdcs = document.createElement('script');
-	bdcs.type = 'text/javascript';
-	bdcs.async = true;
-	bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=10944783693680314046' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(bdcs, s);})();
+<script>
+(function ($) {
+    $('.search-form').on('submit', function (e) {
+        var keyword = $('.search-form-input[name="wd"]').val();
+        window.location = 'https://www.baidu.com/s?wd=site:chuhaiji.cn ' + keyword;
+        return false;
+    });
+})(jQuery);
 </script>
 
 </div>
